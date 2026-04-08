@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Courier Prime", monospace;
+  --font-serif: "Playfair Display", serif;
+  --font-display: "Oswald", sans-serif;
+  --font-mono: "Courier Prime", monospace;
+  
+  --color-paper: #f4f0e6;
+  --color-paper-light: #fdfbf7;
+  --color-paper-dark: #e8e2d2;
+  --color-ink: #1a1a1a;
+  --color-brick: #c24127;
+  --color-mustard: #d9a036;
+  --color-burnt: #c85a27;
+  --color-teal: #5b8b92;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+}
+
+/* Halftone effect for images */
+.halftone-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.halftone-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, #000 1px, transparent 1.5px);
+  background-size: 4px 4px;
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+.halftone-img {
+  filter: grayscale(100%) contrast(120%);
+}
+
+/* Hard shadow */
+.hard-shadow {
+  box-shadow: 8px 8px 0px 0px var(--color-ink);
+}
+.hard-shadow-sm {
+  box-shadow: 4px 4px 0px 0px var(--color-ink);
+}
+.hard-shadow-brick {
+  box-shadow: 8px 8px 0px 0px var(--color-brick);
+}
+.hard-shadow-mustard {
+  box-shadow: 8px 8px 0px 0px var(--color-mustard);
+}
+.hard-shadow-teal {
+  box-shadow: 8px 8px 0px 0px var(--color-teal);
+}
+
+/* Jagged edge */
+.jagged-edge {
+  clip-path: polygon(1% 1%, 99% 0%, 100% 98%, 0% 100%);
+}
+.jagged-edge-alt {
+  clip-path: polygon(0% 2%, 100% 0%, 98% 100%, 2% 98%);
+}
+.torn-edge {
+  clip-path: polygon(0% 0%, 100% 2%, 99% 99%, 1% 100%, 0% 50%, 2% 48%, 0% 45%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-paper-dark);
+  border-left: 2px solid var(--color-ink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink);
+}
