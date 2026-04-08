@@ -35,12 +35,12 @@ export default function Home() {
             
             <div className="bg-[var(--color-paper-light)] border-4 border-ink p-6 hard-shadow-brick max-w-2xl mb-8 relative z-20 rotate-1">
               <p className="font-serif text-2xl md:text-3xl leading-snug">
-                I design for human agency in an age of automation.
+                I am a Nigerian-born visionary, designer, and entrepreneur focused on revolutionizing industries through human-centric design.
               </p>
             </div>
             
             <p className="font-mono text-sm md:text-base max-w-xl mb-12 leading-relaxed bg-[var(--color-paper)] p-4 border-l-4 border-ink relative z-20">
-              Research-Led Innovation & Product-Market Fit | Ex-Ipsos (Google, BBC, Deloitte). My work ensures that AI-powered ventures are anchored not just in data, but in the nuanced contexts of the people they serve.
+              Based in Toronto. Cross-cultural lens for systemic problem-solving. Behavioral research background (seven years analyzing the 'why' behind user actions) fused with applied design strategy. I translate empirical insights into products, services, and experiences that are intuitive and humane.
             </p>
             
             <div className="flex flex-wrap gap-4 relative z-20">
@@ -64,7 +64,7 @@ export default function Home() {
             
             <div className="relative z-10 halftone-wrapper rotate-2 hover:rotate-0 transition-transform duration-500">
               <img 
-                src="https://media.licdn.com/dms/image/v2/D4E03AQG_exJtDhNtcA/profile-displayphoto-crop_800_800/B4EZ0XECD1GwAI-/0/1774208430235?e=1777507200&v=beta&t=raJOf_2FVCL26TZlj1aIig-AvF-nVWm4h0WbaevsZog" 
+                src="https://framerusercontent.com/images/Di1KDGVlMKnZJfQwytwYRnprk.jpg" 
                 alt="Irede Portrait" 
                 className="w-full h-auto border-4 border-ink hard-shadow-teal halftone-img torn-edge"
               />

@@ -39,7 +39,7 @@ export default function Profile() {
         <div className="lg:col-span-5 relative">
           <div className="relative z-10 halftone-wrapper rotate-2 hover:rotate-0 transition-transform duration-500">
             <img 
-              src="https://media.licdn.com/dms/image/v2/D4E03AQG_exJtDhNtcA/profile-displayphoto-crop_800_800/B4EZ0XECD1GwAI-/0/1774208430235?e=1777507200&v=beta&t=raJOf_2FVCL26TZlj1aIig-AvF-nVWm4h0WbaevsZog" 
+              src="https://framerusercontent.com/images/Di1KDGVlMKnZJfQwytwYRnprk.jpg" 
               alt="Irede Portrait" 
               className="w-full h-auto border-4 border-ink hard-shadow-teal halftone-img torn-edge grayscale"
             />

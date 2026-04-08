@@ -27,22 +27,22 @@ export default function Journal() {
       <div className="space-y-16 relative z-10">
         {[
           {
-            title: "Fieldnotes As a Social Practice",
-            date: "Oct 12, 2023",
-            category: "Ethnography",
-            excerpt: "An ethnographic study note on how observing people in their natural environment reveals truths that surveys often miss."
+            title: "The Power of Copywriting (Instagram Comment UX)",
+            date: "Jun 2025",
+            category: "UX Writing",
+            excerpt: "Instagram's comment placeholder text ('What do you think of this?' and 'Start the conversation...') felt warm, open, human. Made the user feel invited rather than commanded. Different from 'Comment below.' Tone and voice affect how users make decisions."
           },
           {
-            title: "The Ethics of Automation in Public Services",
-            date: "Sep 05, 2023",
-            category: "Service Design",
-            excerpt: "When we automate civic processes, who gets left behind? A reflection on designing for the margins."
+            title: "Food Wastage: Field Notes & Photography",
+            date: "May 2025",
+            category: "Design Research",
+            excerpt: "Observation and face-to-face study with a 'Small Chops' chef in Toronto. Field notes organized using the Stop Light Method. Key finding: Visibility = memory = reduced waste."
           },
           {
-            title: "Why 'User-Centric' Isn't Enough Anymore",
-            date: "Aug 18, 2023",
-            category: "Design Philosophy",
-            excerpt: "Moving from user-centric to humanity-centric design. How to consider the broader systemic impact of our digital products."
+            title: "Visual Cues at Sherway Gardens Mall",
+            date: "Jun 2025",
+            category: "Physical UX",
+            excerpt: "Needed the restroom at a 215-store mall for the first time. Panic. Then spotted simple signs with icons and arrows. Crisis averted. Good UX in the physical world. Show, don't tell."
           }
         ].map((post, index) => {
           const rotations = ['rotate-1', '-rotate-1', 'rotate-2'];

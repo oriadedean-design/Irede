@@ -94,9 +94,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </div>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-[var(--color-brick)] hover:underline decoration-2 underline-offset-4 font-bold">LinkedIn</a>
-            <a href="#" className="hover:text-[var(--color-teal)] hover:underline decoration-2 underline-offset-4 font-bold">Twitter</a>
-            <a href="#" className="hover:text-[var(--color-burnt)] hover:underline decoration-2 underline-offset-4 font-bold">Instagram</a>
+            <a href="https://linkedin.com/in/irede-adekunle/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-brick)] hover:underline decoration-2 underline-offset-4 font-bold">LinkedIn</a>
+            <a href="https://x.com/Irede_" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-teal)] hover:underline decoration-2 underline-offset-4 font-bold">Twitter/X</a>
+            <a href="https://instagram.com/ir3de_/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-burnt)] hover:underline decoration-2 underline-offset-4 font-bold">Instagram</a>
           </div>
         </div>
       </footer>

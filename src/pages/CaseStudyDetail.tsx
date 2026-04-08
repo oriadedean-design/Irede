@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import Markdown from 'react-markdown';
 import { caseStudies } from '../data/caseStudies';
 
 export default function CaseStudyDetail() {
@@ -73,42 +74,26 @@ export default function CaseStudyDetail() {
             <ul className="space-y-4 font-mono text-sm">
               <li>
                 <span className="block text-gray-500 mb-1">Role</span>
-                <strong>Lead Designer</strong>
+                <strong>{study.role || 'Lead Designer'}</strong>
               </li>
               <li>
                 <span className="block text-gray-500 mb-1">Timeline</span>
-                <strong>12 Weeks</strong>
+                <strong>{study.timeline || 'Ongoing'}</strong>
               </li>
-              <li>
-                <span className="block text-gray-500 mb-1">Tools</span>
-                <strong>Figma, FigJam</strong>
-              </li>
+              {study.tools && (
+                <li>
+                  <span className="block text-gray-500 mb-1">Tools</span>
+                  <strong>{study.tools}</strong>
+                </li>
+              )}
             </ul>
           </div>
         </div>
         
-        <div className="md:col-span-9 prose prose-lg max-w-none font-serif leading-relaxed">
-          {study.content.split('\n\n').map((paragraph, index) => {
-            if (paragraph.startsWith('- ')) {
-              return (
-                <div key={index} className="bg-[var(--color-paper-light)] border-2 border-ink p-6 my-8 hard-shadow-sm rotate-1">
-                  <ul className="list-none pl-0 font-mono text-base m-0">
-                    {paragraph.split('\n').map((item, i) => (
-                      <li key={i} className="mb-3 flex items-start gap-3">
-                        <span className="text-[var(--color-brick)] mt-1">■</span>
-                        <span>{item.replace('- ', '')}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            }
-            return (
-              <p key={index} className="mb-8 text-xl">
-                {paragraph}
-              </p>
-            );
-          })}
+        <div className="md:col-span-9 font-serif leading-relaxed">
+          <div className="markdown-body prose prose-lg max-w-none prose-headings:font-display prose-headings:uppercase prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b-2 prose-h2:border-ink prose-h2:pb-2 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:mb-6 prose-p:text-xl prose-li:text-xl prose-strong:font-bold prose-strong:bg-[var(--color-mustard)] prose-strong:px-1">
+            <Markdown>{study.content}</Markdown>
+          </div>
         </div>
       </div>
       
@@ -121,7 +106,7 @@ export default function CaseStudyDetail() {
         
         <div className="bg-[var(--color-mustard)] border-4 border-ink p-8 md:p-16 hard-shadow flex flex-col md:flex-row justify-between items-center gap-8 -rotate-1">
           <h3 className="text-4xl md:text-5xl font-display font-bold uppercase leading-none">Ready to start <br/>a project?</h3>
-          <a href="mailto:joseph.iree@email.com" className="bg-ink text-white font-display text-xl uppercase px-8 py-4 border-2 border-ink hard-shadow-brick hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all whitespace-nowrap">
+          <a href="mailto:joseph.iree@gmail.com" className="bg-ink text-white font-display text-xl uppercase px-8 py-4 border-2 border-ink hard-shadow-brick hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all whitespace-nowrap">
             Get in touch
           </a>
         </div>
